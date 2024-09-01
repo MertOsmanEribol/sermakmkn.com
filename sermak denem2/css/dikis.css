@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #f17e01;}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* top header start */
+.header-container {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.social-info {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.social-info .numara {
+    color: white;
+    font-size: 20px;
+}
+
+.social-info .social-media a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+
+
+
+.logo {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+    margin-top: 20px;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.logo img {
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.logo span {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.logo .başlık1 {
+    color: black;
+}
+
+.logo .başlık2 {
+    color: black;
+}
+
+.main-menu {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    column-gap: 80px;
+   
+}
+
+.main-menu a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+    padding: 10px;
+    column-gap: 15px;
+}
+
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu ul li {
+    position: relative;
+}
+
+.main-menu .hizmetler {
+    position: relative;
+}
+
+.submenu1 {
+    display: none;
+    position: absolute;
+    width: 870px;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    border-radius: 20px;
+}
+
+.submenu1 li a {
+    color: white;
+    padding: 10px 20px;
+    display: block;
+}
+
+.main-menu ul li:hover .submenu1 {
+    display: block;
+}
+
+input:focus {
+    outline-offset: -2px;
+}
+
+.container {
+    width: 70%;
+}
+
+#submitsearch {
+    border: 1px solid var(--primary-color);
+    border-radius: 19px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 0 1px var(--primary-color);
+}
+
+#searchInput {
+    width: 70%;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    border-radius: 30px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-24.png');
+    background-position: 10px 7px;
+    background-repeat: no-repeat;
+    padding: 8px 20px 8px 40px;
+    transition: width 0.8s ease-in-out;
+    outline: none;
+    opacity: 0.9;
+}
+
+/* top header end */
+/*Section start*/
+.section {
+    margin-top: 50px;
+    padding-left: 20%;
+    padding-right: 25%;
+}
+
+.grid-gallery {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 250px);
+    grid-gap: 30px;
+    align-content: center;
+    max-width: 100%;
+}
+
+.grid-gallery img {
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+    object-fit: cover;
+    background: #f1511ca1;
+    transition: 0.7s ease-in;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.grid-gallery img:hover {
+    z-index: 5;
+    transform: scale(1.5);
+    background: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    .logo {
+        flex-direction: flex;
+        column-gap: 20px;
+    }
+
+    .main-menu {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+
+    }
+    .section{
+        padding-top: 95px;
+    }
+    .grid-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .main-menu .hizmetler{
+        padding-left: 120px;
+    }
+    .submenu1{
+        display: flex;
+   position:relative;
+        padding: 0px 0px;
+        width: 90%;
+        
+    }
+    .submenu1 a{
+        font-size: 65%;
+        
+
+    }
+}
+
+@media (max-width: 768px) {
+    .logo span {
+        font-size: 30px;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .main-menu {
+        padding-left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .grid-gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo span {
+        font-size: 20px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .main-menu {
+        padding-left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .grid-gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    .section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+@media (max-width: 322px) {
+    .logo span {
+        font-size: 20px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+    .social-info .social-media a{
+        font-size: 12px;
+    }
+    .social-info .numara {
+        font-size: 15px;
+    }
+
+    .main-menu {
+        padding-left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .grid-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .grid-gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    .section {
+        padding-left: 5%;
+        padding-right: 5%;
+        
+    }
+}

@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+:root{
+    --primary-color: #f17e01;}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    /* background-image: url(teksil2.jpg); */
+    background-image: url(teksil2.jpg);
+    background-size:cover;
+    backdrop-filter: blur(3px ) ;
+    background-size:  98%;;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+
+}
+
+/*header start */
+header {
+    height: 100%;
+    border-bottom: 2px solid #f1511c70;
+    height: 100%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    
+
+}
+header nav .logo{
+    padding-left: 100px;
+}
+
+header nav .logo h1 {
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 700;
+    
+}
+header nav .logo h1 span{
+    color: black;
+}
+header nav .logo i img{
+    height: 100px;
+    padding-top: -28px;
+    padding-left: 50px;
+}
+
+header nav .menu {
+    display: flex;
+    font-size: 20px;
+    column-gap: 48px;
+    font-weight: 900;
+text-shadow: 0px 3px black;
+}
+
+header nav .menu ul {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-around;
+    column-gap: 30px;
+
+}
+
+
+header nav .menu a {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+    
+
+}
+
+header nav .menu-button {
+    color: var(--primary-color);
+    padding: 12px 24px;
+    background-color: rgba(205, 91, 10, 0.089);
+    border-radius: 50px;
+    transition: all 0.3s ease-in;
+}
+header nav .menu ul a:hover{
+    color: var(--primary-color);
+}
+header nav .menu .menu-button:hover{
+    background-color: rgb(15, 34, 88);
+}
+/*header end */
+
+/*section start */
+.content{
+    padding: 50px 70px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    
+}
+.content h1{
+    font-size: 38px;
+    padding-bottom: 50px;
+}
+.content p{
+    font-size: 28px;
+    margin-bottom: 100px;
+    font-weight: 700;
+}
+.links{
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+.content a{
+
+    font-size: 24px ;
+    color: var(--primary-color);
+    text-decoration: none;
+    background-color: rgb(243, 242, 242);
+    border-radius: 50px;
+    padding: 12px 24px ;
+transition: all 0.3s ease-in ;
+margin-right: 30px;
+}
+.content a:hover{
+    background-color: rgba(4, 4, 95, 0.76);
+}
+.video{
+    border-radius: 5%;
+    
+}
+/*section end */
+/* responsive start */
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+
+    header nav .logo {
+        padding-left: 50px;
+    }
+
+    header nav .menu {
+        column-gap: 30px;
+    }
+
+    .content {
+        padding: 30px 50px;
+    }
+
+    .content h1 {
+        font-size: 32px;
+    }
+
+    .content p {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    header nav {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    header nav .logo {
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    header nav .menu {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+
+    .content a {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+
+    header nav .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav .menu ul li {
+        margin-bottom: 10px;
+    }
+
+    .content {
+        padding: 20px 30px;
+    }
+
+    .content h1 {
+        font-size: 24px;
+    }
+
+    .content p {
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .content a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header nav .logo h1 {
+        font-size: 20px;
+    }
+
+    header nav .logo i img {
+        height: 80px;
+    }
+
+    .content h1 {
+        font-size: 20px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .content a {
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+/* responsive end */

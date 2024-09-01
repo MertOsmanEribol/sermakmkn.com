@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #f17e01;}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* top header start */
+.header-container {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.social-info {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.social-info .numara {
+    color: white;
+    font-size: 20px;
+}
+
+.social-info .social-media a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+
+
+
+.logo {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+    margin-top: 20px;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.logo img {
+    height: 110px;
+    margin-bottom: 10px;
+}
+
+.logo span {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.logo .başlık1 {
+    color: black;
+}
+
+.logo .başlık2 {
+    color: black;
+}
+
+.main-menu {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    column-gap: 80px;
+   
+}
+
+.main-menu a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+    padding: 10px;
+    column-gap: 15px;
+}
+
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu ul li {
+    position: relative;
+}
+
+.main-menu .hizmetler {
+    position: relative;
+}
+
+.submenu1 {
+    display: none;
+    position: absolute;
+    width: 870px;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    border-radius: 20px;
+}
+
+.submenu1 li a {
+    color: white;
+    padding: 10px 20px;
+    display: block;
+}
+
+.main-menu ul li:hover .submenu1 {
+    display: block;
+}
+
+input:focus {
+    outline-offset: -2px;
+}
+
+.container {
+    width: 70%;
+}
+.map{
+    margin-top: 50px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.map iframe{
+    width: 100%;
+}
+
+.content-title{
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-top: 250px;
+}
+
+
+@media (max-width: 1024px) {
+
+    .main-menu {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .map{
+        padding-top: 50px;
+    }
+    
+    .title-container{
+        height: 150px;
+    }
+    .main-menu .hizmetler{
+        padding-left: 120px;
+    }
+    .submenu1{
+        display: flex;
+   position:relative;
+        padding: 0px 0px;
+        width: 90%;
+        
+    }
+    .submenu1 a{
+        font-size: 65%;
+        
+
+    }
+    .header-container{
+        position: relative;
+    }
+  /*  #searchInput {
+        width: 80%;
+    }
+        */
+}
+
+@media (max-width: 850px) {
+    .logo span {
+        font-size: 30px;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .main-menu {
+        padding-left: 50px;
+        width: 100%;
+        flex-direction: flex;
+        align-items: center;
+        column-gap: 2px;
+    }
+
+  
+}
+
+@media (max-width: 674px) {
+    .logo span {
+        font-size: 20px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .main-menu {
+        padding-left: 0;
+        width: 100%;
+        flex-direction: flex;
+        align-items: center;
+    }
+
+
+
+    .section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .logo span {
+        font-size: 20px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .main-menu {
+        margin-top: 10px;
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        column-gap: 2px;
+       
+    }
+    .section{
+        margin-top: 160px;
+    }
+
+
+}
